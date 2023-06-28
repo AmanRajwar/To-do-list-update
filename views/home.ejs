@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link type="text/css" rel="stylesheet" href="/styles/home.css">
+    <script src="https://kit.fontawesome.com/15f3af5822.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <div class="sections" id="header">
+            <h1>To Do List</h1>
+        </div>
+        <div class="sections" id="description">
+            <div class="wraper">
+                <h3 class="title">Description</h3>
+                <input id="inputTask" placeholder="Enter the task!">
+            </div>
+        </div>
+        <div class="sections" id="details">
+            <div id="category">
+                <div class="wraper">
+                    <h3 class="title">Category</h3>
+                    <select id="categorySelector">
+                        <option value="default" selected disabled>Choose from here</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">work</option>
+                        <option value="Home">Home</option>
+                    </select>
+                </div>
+            </div>
+            <div id="dueDate">
+                <div class="wraper">
+                    <h3 class="title">Due Date</h3>
+                    <input type="date" id="date">
+                </div>
+            </div>
+        </div>
+
+        <div id="buttonsSection">
+            <div class="buttons">
+                <button id="addButton" type="submit">
+                    <i class="fa-solid fa-plus"></i>Add task</button>
+            </div>
+
+            <div class="buttons">
+                <button id="deleteButton" type="submit">
+                    <i class="fa-solid fa-trash-can"></i> Delete Task</button>
+            </div>
+        </div>
+
+        <div id="listSection">
+            <ul id="list">
+                <%for(let i of tasks){%>
+                    <li class="listItems" data-id="<%= i._id%>">
+
+                        <input class="radioButton" id="<%= i._id%>" type="radio">
+                        <div class="taskDetails">
+                            <h2>
+                                <%= i.description %>
+                            </h2>
+                            <p>
+                                <%= i.date %>
+                            </p>
+                        </div>
+                        <div class="categoryButton <%= i.category %>">
+                            <h2>
+                                <%= i.category %>
+                            </h2>
+                        </div>
+                    </li>
+                    <% } %>
+
+            </ul>
+        </div>
+    </main>
+    <!-- <script >
+        let tasks=JSON.parse(`<%-JSON.stringify(tasks)%>`);
+        console.log(tasks[0]);
+    </script> -->
+    <script type="text/javascript" src="/scripts/home.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 700px;
+}
+
+main {
+    width: 50%;
+    height: 85%;
+    padding: 10px;
+    font-family: sans-serif;
+    border: 2px solid black;
+}
+
+/* different sections of to do list */
+.sections {
+    border-bottom:1px solid #ccc;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#buttonsSection {
+
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-bottom:1px solid #ccc;
+}
+
+
+
+#listSection {
+    height: 200px;
+    overflow: scroll;
+}
+
+#listSection::-webkit-scrollbar {
+ display: none;
+}
+
+#list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.listItems {
+    height: 80px;
+    width: 95%;
+    border-bottom:1px solid #ccc;
+}
+
+/* main heading of the page */
+#header {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.wraper {
+    height: 100%;
+    margin-left: 20px;
+}
+
+.title {
+    margin: 0 0 4px 0;
+    padding: 0;
+}
+
+input {
+    border: none;
+    /* height: 30px */
+    width: 97%;
+    font-size: 18px;
+    outline: none;
+}
+
+#details {
+    display: flex;
+}
+
+#details #category {
+    width: 50%;
+}
+
+#details #category .wraper select {
+    width: 100%;
+    font-size: 15px;
+    color: gray;
+    border: none;
+    outline: none;
+}
+
+#details #dueDate {
+    width: 50%;
+}
+
+#details #dueDate .wraper input {
+    width: 100%;
+    border: 0;
+    outline: none;
+}
+
+.buttons {
+    width: 150px;
+    height: 60px;
+}
+
+.buttons button {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.buttons #addButton {
+    background-color: rgb(57, 100, 100);
+}
+
+.buttons #deleteButton {
+    background-color: red;
+    position: relative;
+}
+
+#addButton i{
+    color: beige;
+    font-size: 19px;
+    font-weight: 900;
+    margin-right: 15px;
+}
+
+#deleteButton i{
+    color: beige;
+    font-size: 19px;
+    font-weight: 900;
+    margin-right: 15px;
+    position: absolute;
+    left: 0;
+}
+.listItems {
+    display: flex;
+    align-items: center;
+}
+
+.listItems input {
+    margin: 0 10px;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+ 
+}
+
+.listItems .taskDetails {
+    margin: 0 40px 0 0;
+    padding: 0;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listItems .taskDetails h2 {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.listItems .taskDetails p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+.categoryButton {
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.categoryButton.Personal {
+   background-color: greenyellow;
+}
+.categoryButton.Work {
+    background-color: orangered;
+ }
+ .categoryButton.Home {
+    background-color: cyan;
+ }
